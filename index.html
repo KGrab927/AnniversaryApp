@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Anniversary Portfolio</title>
+        <link rel="icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="mainstyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="logic.js"></script>
+    </head>
+
+    <body ng-app="Anniversary App" ng-controller="mainCtrl">
+        <div class="header-content">
+            <div class="titlecard">
+                <h1 class="title">Happy Anniversary, Dalia!</h1>
+                <h1 class="date">October 30th, 2016 - {{currDate.toLocaleDateString('en-us', {month: 'long', day: 'numeric', year: 'numeric'})}}</h1>
+            </div>
+            <div class="card" id="1">
+                <div class="back" onclick="document.getElementById('1').style.transform +='rotateY(180deg)'">
+                    <div class="time">
+                        I
+                    </div>
+                </div>
+                <div class="front" onclick="document.getElementById('1').style.transform +='rotateY(180deg)'">
+                    <div class="time">{{timeChunks.years}}</div>
+                    <span class="subtitle">
+                        <p ng-if="timeChunks.years != 1">Years</p>
+                        <p ng-if="timeChunks.years == 1">Year</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card" id="2">
+                <div class="back" onclick="document.getElementById('2').style.transform +='rotateY(180deg)'">
+                    <div class="time">
+                        Love
+                    </div>
+                </div>
+                <div class="front" onclick="document.getElementById('2').style.transform +='rotateY(180deg)'">
+                    <div class="time">{{timeChunks.days}}</div>
+                    <span class="subtitle">
+                        <p ng-if="timeChunks.days != 1">Days</p>
+                        <p ng-if="timeChunks.days == 1">Day</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card" id="3">
+                <div class="back" onclick="document.getElementById('3').style.transform +='rotateY(180deg)'">
+                    <div class="time">
+                        You
+                    </div>
+                </div>
+                <div class="front" onclick="document.getElementById('3').style.transform +='rotateY(180deg)'">
+                    <div class="time">{{timeChunks.hours}}</div>
+                    <span class="subtitle">
+                        <p ng-if="timeChunks.hours != 1">Hours</p>
+                        <p ng-if="timeChunks.hours == 1">Hour</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card" id="4">
+                <div class="back" onclick="document.getElementById('4').style.transform +='rotateY(180deg)'">
+                    <div class="time">
+                        So
+                    </div>
+                </div>
+                <div class="front" onclick="document.getElementById('4').style.transform +='rotateY(180deg)'">
+                    <div class="time">{{timeChunks.minutes}}</div>
+                    <span class="subtitle">
+                        <p ng-if="timeChunks.minutes != 1">Minutes</p>
+                        <p ng-if="timeChunks.minutes == 1">Minute</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card" id="5">
+                <div class="back" onclick="document.getElementById('5').style.transform +='rotateY(180deg)'">
+                    <div class="time">
+                        Much :D
+                    </div>
+                </div>
+                <div class="front" onclick="document.getElementById('5').style.transform +='rotateY(180deg)'">
+                    <div class="time">{{timeChunks.seconds}}</div>
+                    <span class="subtitle">
+                        <p ng-if="timeChunks.seconds != 1">Seconds</p>
+                        <p ng-if="timeChunks.seconds == 1">Second</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
